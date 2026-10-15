@@ -1,16 +1,69 @@
-# React + Vite
+# 🛒 Product Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack product store where you can **add, update, and delete products**.
 
-Currently, two official plugins are available:
+🔗 **Live demo:** [product-store-eafz.onrender.com](https://product-store-eafz.onrender.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+> ⏳ Hosted on Render's free tier. The first load may take up to a minute while the server wakes up.
 
-## React Compiler
+## ✨ Highlights
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⚛️ **Tech stack:** React + Express + Tailwind CSS + DaisyUI
+- 🛡️ **Rate limiting & bot detection** with Arcjet
+- 🗂️ **Global state management** with Zustand
+- 🚨 **Error handling** on both the server and the client
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/owusuderrick/product-store.git
+cd product-store
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+cd frontend && npm install && cd ..
+```
+
+### 3. Set up the `.env` file
+
+Create a `.env` file in the project root:
+
+```env
+PORT=3000
+
+PGUSER=...
+PGPASSWORD=...
+PGHOST=...
+PGDATABASE=...
+
+ARCJET_KEY=...
+ARCJET_ENV=development
+```
+
+| Variable     | Description                                |
+| ------------ | ------------------------------------------ |
+| `PORT`       | Port the API server runs on                |
+| `PGUSER`     | PostgreSQL username                        |
+| `PGPASSWORD` | PostgreSQL password                        |
+| `PGHOST`     | PostgreSQL host                            |
+| `PGDATABASE` | PostgreSQL database name                   |
+| `ARCJET_KEY` | Your Arcjet API key                        |
+| `ARCJET_ENV` | Arcjet environment (`development` locally) |
+
+### 4. Run the API
+
+```bash
+npm run dev
+```
+
+### 5. Run the frontend
+
+```bash
+cd frontend
+npm run dev
+```
